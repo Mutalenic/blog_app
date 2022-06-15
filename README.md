@@ -1,24 +1,46 @@
-# README
+## Blog app - setup and controllers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, I have created all controllers and views for my Blog app. I have added added a simple placeholders for my views with plain HTML.
 
-Things you may want to cover:
+## Built with
+- Ruby
+- Rubocop
+- Stylelint
+- RoR
 
-* Ruby version
+## SetUp
+To get a local copy up and running follow this steps
+- git clone `https://github.com/Mutalenic/blog_app.git`
+- Run `bundle install`
 
-* System dependencies
+# Run the project
+`rails s`
 
-* Configuration
 
-* Database creation
+## Author
 
-* Database initialization
+👤 **Nicholas Mutale**
 
-* How to run the test suite
+- GitHub: [@mutalenic](https://github.com/Mutalenic)
+- Twitter: [@nicomutale](https://twitter.com/nicomutale)
+- LinkedIn: [@nicomutale](https://www.linkedin.com/in/nicomutale/)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributing
 
-* Deployment instructions
+Contributions, issues, and feature requests are welcome!
 
-* ...
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## Acknowledgments
+
+- Microverse 
+
+## License
+
+This project is [MIT](./MIT.md) licensed.
+
