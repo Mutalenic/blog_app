@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   resources :user, only: [:index, :show] do
     resources :post, only: [:index, :show]
   end
-  root 'users#index'
 end
