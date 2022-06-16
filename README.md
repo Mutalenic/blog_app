@@ -16,6 +16,15 @@ To get a local copy up and running follow this steps
 # Run the project
 `rails s`
 
+### Run linters
+```
+rubocop -a
+
+### Tests
+```
+rspec spec
+```
+
 
 ## Author
 
