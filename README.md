@@ -1,6 +1,6 @@
 ## Blog app - controllers Specs
 
-In this project, I have set up tests on the controllers I of my Blog app.
+In this project, I have set up tests on the controllers of my Blog app.
 
 ## Built with
 - Ruby
