@@ -1,6 +1,6 @@
-## Blog app - controllers Specs
+## Blog app - Creating A Data Model
 
-In this project, I have set up tests on the controllers of my Blog app.
+In this project, I have used migration files to build my schema.
 
 ## Built with
 - Ruby
