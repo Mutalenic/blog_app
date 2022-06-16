@@ -1,6 +1,6 @@
-## Blog app - setup and controllers
+## Blog app - controllers Specs
 
-In this project, I have created all controllers and views for my Blog app. I have added added a simple placeholders for my views with plain HTML.
+In this project, I have set up tests on the controllers I of my Blog app.
 
 ## Built with
 - Ruby
