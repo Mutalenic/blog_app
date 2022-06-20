@@ -1,6 +1,6 @@
 ## Blog App - Processing Data in Models
 
-In this project, I have set up our models for the following tables: Users, Posts, Comments, and Likes and have setup the foreign key in the table schema.
+In this project, I have set up models for the following tables: Users, Posts, Comments, and Likes and have setup the foreign key in the table schema.
 
 I
 
