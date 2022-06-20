@@ -1,6 +1,8 @@
-## Blog app - Creating A Data Model
+## Blog App - Processing Data in Models
 
-In this project, I have used migration files to build my schema.
+In this project, I have set up our models for the following tables: Users, Posts, Comments, and Likes and have setup the foreign key in the table schema.
+
+I
 
 ## Built with
 - Ruby
