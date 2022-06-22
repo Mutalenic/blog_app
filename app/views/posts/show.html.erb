@@ -1,6 +1,7 @@
 <main>
 <section class="postscontainer">
 <div class="postcomment">
+<h4>Post<%= @post.id%><h4>
   <h4><%= @post.title %></h4>
   <p class="commentcounter">Comments: <%= @post.comments_counter || 0%>, Likes: <%= @post.likes_counter || 0%></p>
   <p><%= @post.text %></p>
