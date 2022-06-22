@@ -1,17 +1,9 @@
 <main>
-  <section>
-    <ul>put
-    #   <% @users.each do |user|%>
-    #     <%= link_to user do %>
-    #       <li class="card hover">
-    #         <div class="user-image border"></div>
-    #         <div class="user-data border">
-    #           <h1><%= user.name %></h1>
-    #           <p class="number-posts">Number of posts: <%= user.posts_counter %></p>
-    #         </div>
-    #       </li>
-    #     <% end %>
-    #   <% end %>
-    </ul>  
-  </section>
+<section class="user">
+  <img src="<%= user.photo %>" alt="user-image" />
+  <div class="details">
+    <h2><%= link_to user.name, user_path(user) %></h2>
+    <p>Number of posts: <%= user.posts_counter || 0 %></p>
+  <div>
+</section>
 </main> 
