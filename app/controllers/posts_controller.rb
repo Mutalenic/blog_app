@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts.order(created_at: :desc).limit(3)
+    @user = current_user
     end   
 
   def show
