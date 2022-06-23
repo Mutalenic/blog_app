@@ -1,2 +1,15 @@
-<h1>Posts</h1>
-<p>Here is a list of posts for a given user</p>
+<main>
+<section class="posts">
+  <img class="image" src="<%=@user.photo%>" alt="user_image" />
+  <div class="details">
+    <h2><%= @user.name%> </h2>
+    <p>Number of posts: <%= @user.posts_counter%> </p>
+  </div> 
+</section>
+
+<section class="usercontainer">
+  <% @user.posts.each do |post| %>
+    <%= render partial: 'post', locals: {post: post} %>
+  <% end %>
+</section>
+</main>

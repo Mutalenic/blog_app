@@ -1,0 +1,13 @@
+<main>
+<%= link_to user_post_path(@user, id: post.id) do %>
+    <section class="postscontainer">
+        <div class="postcomment">
+    <h3>Post<%=post.id%> </h3>
+      <h4><%= post.title %></h4>
+      <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter || 0%></p>
+      <p><%= post.text %></p>
+      <%= render partial: 'comment', locals: {post: post, comments: post.recent_comments}%> 
+    </div>
+      </section> 
+    <%end%>
+</main>

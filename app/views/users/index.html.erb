@@ -1,2 +1,7 @@
-<h1>Users</h1>
-<p>Show all users</p>
+<main>
+<section class="userscontainer">
+  <% @users.each do |user| %>
+    <%= render partial: 'user', locals: {user: user} %>
+  <% end %>
+</section> 
+</main> 
