@@ -8,8 +8,11 @@
 </section>
 
 <section class="usercontainer">
-  <% @user.posts.each do |post| %>
+  <% @posts.each do |post| %>
     <%= render partial: 'post', locals: {post: post} %>
   <% end %>
-</section>
+  <%= link_to new_user_post_path do %>
+  <button class="btn">Create Post</button>
+  <% end %>
+  </section>
 </main>

@@ -6,8 +6,8 @@
       <h4><%= post.title %></h4>
       <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter || 0%></p>
       <p><%= post.text %></p>
+      </div>
       <%= render partial: 'comment', locals: {post: post, comments: post.recent_comments}%> 
-    </div>
       </section> 
     <%end%>
 </main>
