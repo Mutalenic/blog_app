@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     @user = current_user
     if @post.save
-      flash[:success] = "Post saved!"
+      flash[:success] = 'Post saved!'
       redirect_to user_post_url(@user, @post)
     else
       render :new
