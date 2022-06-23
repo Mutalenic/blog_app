@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
+    @current_user = current_user
   end
 
   def show
@@ -10,22 +11,25 @@ class PostsController < ApplicationController
   end
 
   def new
-    @new_post = Post.new
-    @user = User.find(params[:user_id])
+    @post = Post.new
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @post = Post.new(post_params)
-    @post.author = @user
+    @post = current_user.posts.new(post_params)
+    @post.likes_counter = 0
+    @post.comments_counter = 0
+    @user = current_user
     if @post.save
-      redirect_to user_post_url(id: @post.id, user_id: @user.id)
+      flash[:success] = "Post saved!"
+      redirect_to user_post_url(@user, @post)
     else
       render :new
     end
   end
 
-    def post-params
-      params.require(:post).permit(:title, :body)
-    end
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
