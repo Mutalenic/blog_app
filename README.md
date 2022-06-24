@@ -1,8 +1,6 @@
-## Blog App - Views
+## Blog app - Add Forms
 
-In this project, I have added the Views associated with the Models and Controllers I created for my Blog App.
-
-I
+In this project I have added forms to my Blog app.
 
 ## Built with
 - Ruby
