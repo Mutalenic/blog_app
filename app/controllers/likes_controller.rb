@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-    def create
+  def create
     like = Like.new(author: current_user, post: current_post)
     if like.save
       flash[:success] = 'Post liked!'
