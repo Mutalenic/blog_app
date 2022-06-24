@@ -1,9 +1,6 @@
-## Blog App - Views
+## Blog App: validations, model specs, and n+1 problems
 
-In this project, I have added the Views associated with the Models and Controllers I created for my Blog App.
-
-I
-
+In this project, I have added validations to my models, created specs for them, and found and fixed N+1 queries problems.
 ## Built with
 - Ruby
 - Rubocop

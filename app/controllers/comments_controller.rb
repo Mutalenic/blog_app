@@ -11,9 +11,11 @@ class CommentsController < ApplicationController
     comment.author = user
     comment.post = post
     if comment.save
+      flash[:notice] = 'Comment was successfully created.'
       redirect_to user_post_url(id: post.id)
     else
-      redirect_to new_user_post_comment_url(id: post.id, user_id: user.id)
+      flash[:Error] = 'Comment was not created.'
+      render :new
     end
   end
 
