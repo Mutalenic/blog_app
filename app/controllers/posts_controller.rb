@@ -21,8 +21,7 @@ class PostsController < ApplicationController
     @user = current_user
     if @post.save
       flash[:success] = 'Post saved!'
-      redirect_to { user_post(current_user)}
-    
+      redirect_to user_post_url(@user, @post)
     else
       flash[:error] = 'Post not saved!'
       render :new
@@ -32,6 +31,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :text)
   end
 end

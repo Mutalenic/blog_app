@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
       redirect_to user_post_url(id: post.id)
     else
       flash[:Error] = 'Comment was not created.'
-      redirect_to new_user_post_comment_url(id: post.id, user_id: user.id)
+      render :new
     end
   end
 
