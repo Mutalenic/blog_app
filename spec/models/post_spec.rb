@@ -4,10 +4,11 @@ RSpec.describe Post, type: :model do
   describe 'Validations for the post model' do
     before(:each) do
       @user = User.new(name: 'Tom', bio: 'I am a developer', posts_counter: 0)
-      @post = Post.new(author: @user, title: 'This is a post', text: 'This is a post text', likes_counter: 0, comments_counter: 0)
+      @post = Post.new(author: @user, title: 'This is a post', text: 'This is a post text', likes_counter: 0,
+                       comments_counter: 0)
     end
 
-    before{@post}
+    before { @post }
 
     it 'title is nil' do
       @post.title = nil

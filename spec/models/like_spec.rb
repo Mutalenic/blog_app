@@ -6,7 +6,7 @@ RSpec.describe Like, type: :model do
       @like = Like.new(author_id: 1, post_id: 1)
     end
 
-    before{@like}
+    before { @like }
 
     it 'if author_id is not present, it should not be valid' do
       @like.author_id = nil

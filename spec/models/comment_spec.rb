@@ -6,7 +6,7 @@ RSpec.describe Comment, type: :model do
       @comment = Comment.new(author_id: 1, post_id: 1, text: 'This is a comment')
     end
 
-    before{@comment}
+    before { @comment }
     it 'title is required' do
       @comment.text = nil
       expect(@comment).to_not be_valid
