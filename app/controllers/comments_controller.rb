@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
       flash[:notice] = 'Comment was successfully created.'
       redirect_to user_post_url(id: post.id)
     else
-      flash[:error] = 'Comment was not created.'
+      flash[:Error] = 'Comment was not created.'
       redirect_to new_user_post_comment_url(id: post.id, user_id: user.id)
     end
   end

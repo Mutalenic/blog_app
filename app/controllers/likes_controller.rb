@@ -5,6 +5,7 @@ class LikesController < ApplicationController
       flash[:success] = 'Post liked!'
       redirect_to user_post_url(current_user, current_post)
     else
+      flash[:error] = 'Can\'t like post twice!'
       redirect_to { new_user_post(current - user) }
     end
   end

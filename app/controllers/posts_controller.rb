@@ -21,7 +21,8 @@ class PostsController < ApplicationController
     @user = current_user
     if @post.save
       flash[:success] = 'Post saved!'
-      redirect_to user_post_url(@user, @post)
+      redirect_to { user_post(current_user)}
+    
     else
       flash[:error] = 'Post not saved!'
       render :new
