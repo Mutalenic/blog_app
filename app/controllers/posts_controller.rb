@@ -23,6 +23,7 @@ class PostsController < ApplicationController
       flash[:success] = 'Post saved!'
       redirect_to user_post_url(@user, @post)
     else
+      flash[:error] = 'Post not saved!'
       render :new
     end
   end
@@ -30,6 +31,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :text)
   end
 end
