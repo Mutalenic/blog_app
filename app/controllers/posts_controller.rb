@@ -5,11 +5,6 @@ class PostsController < ApplicationController
     @current_user = current_user
   end
 
-  def show
-    @user = User.find(params[:user_id])
-    @post = Post.find(params[:id])
-  end
-
   def new
     @post = Post.new
   end
@@ -26,6 +21,11 @@ class PostsController < ApplicationController
       flash[:error] = 'Post not saved!'
       render :new
     end
+  end
+
+  def show
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
   end
 
   private
