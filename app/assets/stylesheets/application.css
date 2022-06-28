@@ -94,3 +94,41 @@ img {
   display: flex;
   justify-content: flex-end;
 }
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.actions {
+  margin-bottom: 1rem;
+}
+
+.mail {
+  width: 40%;
+  justify-content: center;
+  padding: 10px;
+}
+
+ .login {
+  border-radius: 4px;
+  color: #202124;
+  font-size: 16px;
+  height: 40px;
+  margin: 1px 1px 0 1px;
+  padding: 13px 15px;
+  z-index: 1;
+} 
+
+.passwords {
+  width: 80%;
+  padding: 10px;
+}
