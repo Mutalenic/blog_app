@@ -1,5 +1,7 @@
 <section>
 <% comments.includes(:author).each do |comment| %>
+    <div class="add_comment">
     <p><%= comment.author.name %>: <%= comment.text %></p>
+    </div>
 <% end %>
 </section> 

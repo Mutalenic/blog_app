@@ -3,9 +3,9 @@
 <div class="postcomment">
 <h4>Post <%= @post.id%> by <%= @user.name %><h4>
   <h4><%= @post.title %></h4>
-  <p class="commentcounter">Comments: <%= @post.comments_counter || 0%>, Likes: <%= @post.likes_counter || 0%></p>
   <p><%= @post.text %></p>
   </div>
+  <p class="comment_like">Comments: <%= @post.comments_counter || 0%>, Likes: <%= @post.likes_counter || 0%></p>
   <%= render partial: 'likes/like', locals: {like: @like, post_id: @post.id}%>
   <%= render partial: 'comment', locals: {post: @post, comments: @post.comments.includes(:author)}%>
   <%= link_to new_user_post_comment_path(post_id: @post.id) do %>

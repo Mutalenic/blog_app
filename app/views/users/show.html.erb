@@ -19,14 +19,14 @@
   <h5> Post <span><%= post.id %></span></h5>
     <h4><%= post.title %></h4>
     <p><%= post.text %> </p>
-    <span>
+    <span class="comment_like">
       Comment: <%= post.comments_counter%>, Likes: <%= post.likes_counter || 0 %>
     </span>
   </div>
   <% end %>
   <% end %>
 </section>
-<button class="showposts">
+<button class="btn">
     <%= link_to "See all posts", user_posts_path(@user) %>
 </button>
 </main>

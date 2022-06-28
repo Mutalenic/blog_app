@@ -1,8 +1,23 @@
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 .posts {
   display: flex;
   text-decoration: none;
+  flex-direction: column;
   color: #000;
+  padding: 2%;
+}
+
+.posts1 {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  padding: 2%;
 }
 
 .showposts {
@@ -49,11 +64,17 @@ img {
   justify-content: space-between;
   border: 2px solid #000;
   padding: 20px;
-  margin: 10px;
-  width: 100%;
+  width: 89%;
 }
 
-.userbio {
+
+.showdetails{
+    border: 2px solid #000;
+    padding: 20px;
+    width: 92%;
+} 
+
+.bio {
   border: 2px solid #000;
   padding: 20px;
   margin: 10px;
@@ -67,13 +88,19 @@ img {
 }
 
 .post {
-  margin-left: 80%;
+  display: flex;
+  justify-content: flex-end;
 }
+
+
+.showpost{
+  display: flex;
+  justify-content: flex-end;
+  }
 
 .usercontainer {
   display: flex;
   flex-direction: column;
-  border: 2px solid #000;
   padding: 20px;
   margin: 10px;
 }
@@ -83,7 +110,7 @@ img {
   text-decoration: none;
 }
 
-.commentcounter {
+.comment_like {
   display: flex;
   justify-content: flex-end;
 }
@@ -112,13 +139,9 @@ img {
 }
 
  .login {
-  border-radius: 4px;
-  color: #202124;
-  font-size: 16px;
-  height: 40px;
-  margin: 1px 1px 0 1px;
-  padding: 13px 15px;
-  z-index: 1;
+  width: 41%;
+  justify-content: center;
+  padding: 10px;
 } 
 
 .passwords {
@@ -129,4 +152,43 @@ img {
 .image {
   width: 80px;
   height: 80px;
+}
+
+.comment_like {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #2d2d2d;
+  box-shadow: 3px 5px;
+  padding: 0.25rem 0.5rem;
+  max-width: 100px;
+  margin-left: 15px;
+}
+
+.add_comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid #080707;
+
+}
+
+.add_comment a {
+  text-decoration: none;
+  color: #000;
+}
+
+.add_comment_field{
+  width: 60%;
+  padding: 40px;
+}
+
+#post_title {
+  width: 20%;
+  padding: 10px;
 }
