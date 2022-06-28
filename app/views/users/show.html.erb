@@ -1,7 +1,7 @@
 <main>
 <section class="users">
 <div class="userdetails">
-  <img class="image" src="<%=@user.photo%>" alt="user_image" />
+<%= image_tag("avatar.jpg", class:"image", alt:"user_image") %>
   <div class="details">
     <h2><%= @user.name%> </h2>
     <p class="post">Number of posts: <%= @user.posts_counter%> </p>

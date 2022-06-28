@@ -1,13 +1,6 @@
-/* body {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  } */
 
 .posts {
   display: flex;
-  flex-direction: column;
   text-decoration: none;
   color: #000;
 }
@@ -57,7 +50,7 @@ img {
   border: 2px solid #000;
   padding: 20px;
   margin: 10px;
-  width: 80%;
+  width: 100%;
 }
 
 .userbio {
@@ -131,4 +124,9 @@ img {
 .passwords {
   width: 80%;
   padding: 10px;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
 }
