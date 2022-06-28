@@ -1,6 +1,6 @@
-## Blog App: validations, model specs, and n+1 problems
+## Blog App: validations, model specs, and n+1 problems, devise.
 
-In this project, I have added validations to my models, created specs for them, and found and fixed N+1 queries problems.
+In this project, I have added validations to my models, created specs for them, and found and fixed N+1 queries problems, add devise.
 ## Built with
 - Ruby
 - Rubocop
@@ -32,6 +32,19 @@ rspec spec
 - GitHub: [@mutalenic](https://github.com/Mutalenic)
 - Twitter: [@nicomutale](https://twitter.com/nicomutale)
 - LinkedIn: [@nicomutale](https://www.linkedin.com/in/nicomutale/)
+
+👤 Islam Bahnas
+
+- GitHub: [@Banstein](https://github.com/Banstein)
+- Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
+- LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
+
+
+👤 Bonke Gcobo
+
+- GitHub: [@bonkegcobo](https://github.com/bonkegcobo)
+- Twitter: [@bonkegcobo](https://twitter.com/bonkegcobo)
+- LinkedIn: [bonkegcobo](www.linkedin.com/in/bonkegcobo)
 
 ## Contributing
 
