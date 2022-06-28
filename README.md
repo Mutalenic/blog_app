@@ -1,6 +1,6 @@
-## Blog App: validations, model specs, and n+1 problems, devise.
+## Blog App: Add Devise
 
-In this project, I have added validations to my models, created specs for them, and found and fixed N+1 queries problems, add devise.
+In this project, we have added the devise gem to the blog app and used it for the registration and login of users.
 ## Built with
 - Ruby
 - Rubocop
