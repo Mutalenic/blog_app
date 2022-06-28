@@ -39,6 +39,13 @@ rspec spec
 - Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
 - LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
 
+
+👤 Bonke Gcobo
+
+- GitHub: [@bonkegcobo](https://github.com/bonkegcobo)
+- Twitter: [@bonkegcobo](https://twitter.com/bonkegcobo)
+- LinkedIn: [bonkegcobo](www.linkedin.com/in/bonkegcobo)
+
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
