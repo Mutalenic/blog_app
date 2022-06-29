@@ -29,12 +29,12 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def destory
-    @post= Post.find(params[:id])
+  def destroy
+    @post = Post.find(params[:id])
     @author = @post.author
-    @author.decrement!(:posts_counter)
-    @post.destory!
-    redirect_to user_post_path(id:@author.id), notice: 'Post was successfully deleted.'    
+    @author.posts_counter -= 1
+    @post.destroy!
+    redirect_to user_post_path, notice: 'Post was successfully deleted.'
   end
 
   private
