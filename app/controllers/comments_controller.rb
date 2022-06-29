@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
 
     if @comment.destroy
       flash[:notice] = 'Comment was successfully deleted.'
-      redirect_to user_post_path(id: @post.id)	
+      redirect_to user_post_path(id: @post.id)
     else
       flash[:Error] = 'Comment was not deleted.'
       render :new
