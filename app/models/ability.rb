@@ -7,7 +7,18 @@ class Ability
     user ||= User.new # guest user (not logged in)
     can :read, Post
     can :read, Comment
+
     return unless user.present?
+    can :manage, Post, author:user
+    can :manage, Comment, author:user
+    can :create, Comment
+    can :create, Post
+    can :create, Like
+    return unless user.admin?
+
+    can :manage, :all
+  
+
   
     
     # Define abilities for the user here. For example:
