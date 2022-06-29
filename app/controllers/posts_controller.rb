@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     @author = @post.author
     @author.decrement!(:posts_counter)
     @post.destory!
-    redirect_to user_post_path(id:@author.id), flash[:notice] "Post deleted successfuly"    
+    redirect_to user_post_path(id:@author.id), notice: 'Post was successfully deleted.'    
   end
 
   private
