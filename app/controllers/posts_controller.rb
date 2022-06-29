@@ -25,16 +25,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
+    @user = User.find(@post.author_id)
+    
   end
 
   def destroy
     @post = Post.find(params[:id])
-    @author = @post.author
+    @author = User.find(@post.author_id)
     @author.posts_counter -= 1
     @post.destroy!
-    redirect_to user_post_path, notice: 'Post was successfully deleted.'
+    redirect_to root_path, notice: 'Post was successfully deleted.'
   end
 
   private

@@ -3,8 +3,9 @@
     <div class="add_comment">
     <p><%= comment.author.name %>: <%= comment.text %></p>
     </div>
-    <% if can? :destory, comment%>
-    <%= button_to 'Delete', user_post_comments_path(post_id: comment.post_id, id: comment.id), method: :delete, class: 'btn btn-danger' %>
+    <% if can? :destroy, comment%>
+    	
+    <%= button_to 'Delete', user_post_comment_path(post_id: comment.post_id, id: comment.id), method: :delete, class: 'btn btn-danger' %>
 <% end %>
 <% end %>
 </section> 
