@@ -3,5 +3,8 @@
     <div class="add_comment">
     <p><%= comment.author.name %>: <%= comment.text %></p>
     </div>
+    <% if can? :destory, comment%>
+    <%= button_to 'Delete', user_post_comment_path(id: post.id, id: comment.id), method: :delete, class: 'btn btn-danger' %>
+    <% end %>
 <% end %>
 </section> 
