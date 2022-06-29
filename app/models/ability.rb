@@ -4,6 +4,12 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    user ||= User.new # guest user (not logged in)
+    can :read, Post
+    can :read, Comment
+    return unless user.present?
+  
+    
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
