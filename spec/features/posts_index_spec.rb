@@ -35,7 +35,7 @@ end
 RSpec.describe 'Posts show page', type: :feature do
   before(:each) do
     User.destroy_all
-    @user = User.create(name: 'Nic', photo: 'profile.png',
+    @user = User.create(name: 'Nic', photo: 'avatar.png',
                         bio: 'Developer from Kenya',
                         email: 'nicbke@mail.com', password: 'password',
                         confirmed_at: Time.now, role: 'admin', posts_counter: 0)
@@ -74,6 +74,23 @@ RSpec.describe 'Posts show page', type: :feature do
     scenario 'I can see the post comments.' do
       expect(page).to have_content 'My first comment'
       expect(page).to have_content 'My second comment'
+    end
+
+    scenario 'I can see the user\'s profile picture.' do
+      expect(page).to have_css('img[src*="avatar"]')
+    end
+
+    scenario 'I can see the user\'s username.' do
+      expect(page).to have_content 'Nic'
+    end
+
+    scenario 'I can see the number of posts the user has written.' do
+      expect(page).to have_content 'posts: 3'
+    end
+
+    scenario "When I click on a post, I am redirected to that post's show page" do
+      click_link 'My title'
+      expect(current_path).to eq "/users/#{User.first.id}/posts/#{Post.first.id}"
     end
   end
 end
