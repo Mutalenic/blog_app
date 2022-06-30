@@ -1,6 +1,6 @@
-## Blog App: Add Devise
+## Blog App - Integration Specs For Views
 
-In this project, we have added the devise gem to the blog app and used it for the registration and login of users.
+In this project, we have created integration tests for all of the views used in our project. We  have covered the user workflows and our users experience while taking into consideration the possible errors our users may cause.
 ## Built with
 - Ruby
 - Rubocop
