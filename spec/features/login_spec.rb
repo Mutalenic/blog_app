@@ -24,8 +24,8 @@ RSpec.feature 'Tests login page', type: :feature do
     end
 
     scenario 'if credentials are right' do
-      @user1 = User.create!(name: 'Lynette', photo: 'mines', bio: 'Developer.', email: 'lynette@gmail.com',
-                            password: 'lynette123', confirmed_at: Time.now, role: 'admin')
+      @user1 = User.create!(name: 'Nico', photo: 'mines', bio: 'Developer.', email: 'nico@gmail.com',
+                            password: 'nico123', confirmed_at: Time.now, role: 'admin')
 
       within 'form' do
         fill_in 'Email', with: @user1.email
