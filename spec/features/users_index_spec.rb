@@ -41,8 +41,6 @@ RSpec.describe 'Testing user index page', type: :feature do
     expect(page.first('img')['src']).to have_content '.jpg'
   end
 
-  
-
   scenario 'See the number of posts each user has written' do
     expect(page).to have_content('Number of posts: 0')
   end
@@ -53,24 +51,20 @@ RSpec.describe 'Testing user index page', type: :feature do
   end
 end
 
-
-
-require 'rails_helper'
-
 RSpec.describe 'Testing user index page', type: :feature do
   before(:each) do
-    @first = User.create(name: 'Nicholas', photo: 'avatar-451cbda7e4c3e7eeb9fa27d71ff7c3d79c4263b386bdc16b2065ada79ec004d7.jpg',
+    @first = User.create(name: 'Nicholas', photo: 'avatar.png',
                          bio: 'Developer.',
                          email: 'nicbkee@email.com',
                          password: 'password', confirmed_at: Time.now,
                          posts_counter: 0, role: 'admin')
 
-    @second = User.create(name: 'Iknw', photo: 'avatar-451cbda7e4c3e7eeb9fa27d71ff7c3d79c4263b386bdc16b2065ada79ec004d7.jpg',
+    @second = User.create(name: 'Iknw', photo: 'avatar.png',
                           bio: 'Developer.', email: 'msgeme@email.com',
                           password: 'password', confirmed_at: Time.now,
                           posts_counter: 0, role: 'admin')
 
-    @third = User.create(name: 'kyut', photo: 'avatar-451cbda7e4c3e7eeb9fa27d71ff7c3d79c4263b386bdc16b2065ada79ec004d7.jpg',
+    @third = User.create(name: 'kyut', photo: 'avatar.png',
                          bio: 'Developer.', email: 'kyut@email.com',
                          password: 'password', confirmed_at: Time.now,
                          posts_counter: 0, role: 'admin')
@@ -95,10 +89,8 @@ RSpec.describe 'Testing user index page', type: :feature do
   end
 
   scenario 'See profile picture for each user' do
-    expect(page.first('img')['src']).to have_content 'avatar-451cbda7e4c3e7eeb9fa27d71ff7c3d79c4263b386bdc16b2065ada79ec004d7.jpg'
+    expect(page.first('img')['src']).to have_content 'avatar.png'
   end
-
-  
 
   scenario 'See the number of posts each user has written' do
     expect(page).to have_content('Number of posts: 0')

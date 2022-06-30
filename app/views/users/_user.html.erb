@@ -1,6 +1,6 @@
 <main>
 <section class="user">
-<%= image_tag("avatar.jpg", class:"image", alt:"user_image") %>
+<%= image_tag("avatar.png", class:"image", alt:"user_image") %>
   <div class="showdetails">
     <h2><%= link_to user.name, user_path(user) %></h2>
     <p class="showpost">Number of posts: <%= user.posts_counter || 0 %></p>

@@ -9,10 +9,14 @@ RSpec.describe 'Posts show page', type: :feature do
     @user1 = User.create(name: 'Iknw', photo: 'profile.jpg',
                          bio: 'Developer', email: 'msgeme@email.com',
                          password: 'password', confirmed_at: Time.now)
-    Post.create(title: 'My title', text: 'My text', author_id: @user.id, likes_counter: 0, comments_counter: 0)
-    @comment = Comment.create(text: 'My first comment', author: User.first, post: Post.first)
-    @comment = Comment.create(text: 'My second comment', author: User.first, post: Post.first)
-    @like = Like.create(author_id: User.first.id, post_id: Post.first.id)
+    Post.create(title: 'My title', text: 'My text',
+                author_id: @user.id, likes_counter: 0, comments_counter: 0)
+    @comment = Comment.create(text: 'My first comment',
+                              author: User.first, post: Post.first)
+    @comment = Comment.create(text: 'My second comment',
+                              author: User.first, post: Post.first)
+    @like = Like.create(author_id: User.first.id,
+                        post_id: Post.first.id)
 
     visit new_user_session_path
     fill_in 'Email', with: 'nicbkee@email.com'
