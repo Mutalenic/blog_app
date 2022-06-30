@@ -58,6 +58,7 @@ group :development, :test do
   gem 'pry', '~> 0.13.1'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'database_cleaner'
 end
 
 group :development do
