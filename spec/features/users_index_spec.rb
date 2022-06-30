@@ -2,18 +2,18 @@ require 'rails_helper'
 
 RSpec.describe 'Testing user index page', type: :feature do
   before(:each) do
-    @first = User.create(name: 'Nicholas', photo: 'profile.jpg',
+    @first = User.create(name: 'Nicholas', photo: 'avatar.png',
                          bio: 'Developer.',
                          email: 'nicbkee@email.com',
                          password: 'password', confirmed_at: Time.now,
                          posts_counter: 0, role: 'admin')
 
-    @second = User.create(name: 'Iknw', photo: 'profile.jpg',
+    @second = User.create(name: 'Iknw', photo: 'avatar.png',
                           bio: 'Developer.', email: 'msgeme@email.com',
                           password: 'password', confirmed_at: Time.now,
                           posts_counter: 0, role: 'admin')
 
-    @third = User.create(name: 'kyut', photo: 'profile.jpg',
+    @third = User.create(name: 'kyut', photo: 'avatar.png',
                          bio: 'Developer.', email: 'kyut@email.com',
                          password: 'password', confirmed_at: Time.now,
                          posts_counter: 0, role: 'admin')
@@ -38,7 +38,7 @@ RSpec.describe 'Testing user index page', type: :feature do
   end
 
   scenario 'See profile picture for each user' do
-    expect(page.first('img')['src']).to have_content '.jpg'
+    expect(page.first('img')['src']).to have_content 'avatar'
   end
 
   scenario 'See the number of posts each user has written' do
@@ -89,7 +89,7 @@ RSpec.describe 'Testing user index page', type: :feature do
   end
 
   scenario 'See profile picture for each user' do
-    expect(page.first('img')['src']).to have_content 'avatar.png'
+    expect(page.first('img')['src']).to have_content 'avatar'
   end
 
   scenario 'See the number of posts each user has written' do

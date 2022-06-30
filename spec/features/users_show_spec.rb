@@ -24,7 +24,7 @@ RSpec.feature 'Testing user show page', type: :feature do
   end
 
   scenario "I can see the user's profile picture" do
-    expect(page.first('img')['src']).to have_content 'avatar.png'
+    expect(page.first('img')['src']).to have_content 'avatar'
   end
 
   scenario "I can see the user's bio" do
