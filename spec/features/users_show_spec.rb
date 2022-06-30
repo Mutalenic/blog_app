@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature 'Testing user show page', type: :feature do
+RSpec.feature 'user show page',
+              type: :feature do
   before(:each) do
     User.destroy_all
     @first = User.create(name: 'Nicholas', photo: 'avatar.png',
@@ -8,8 +9,8 @@ RSpec.feature 'Testing user show page', type: :feature do
                          confirmed_at: Time.now, role: 'admin', posts_counter: 0)
 
     7.times do |i|
-     @p = Post.create(author: @first, title: "Post #{i}", text: "This is a post #{i}",
-                  likes_counter: 0, comments_counter: 0)
+      @p = Post.create(author: @first, title: "Post #{i}", text: "This is a post #{i}",
+                       likes_counter: 0, comments_counter: 0)
     end
 
     visit user_session_path
@@ -41,7 +42,7 @@ RSpec.feature 'Testing user show page', type: :feature do
     expect(current_path).to eq user_posts_path(User.first.id)
   end
 
-  scenario "I can see the number of posts a user has written" do
+  scenario 'I can see the number of posts a user has written' do
     expect(page).to have_content('Number of posts: 7')
   end
 
@@ -52,9 +53,7 @@ RSpec.feature 'Testing user show page', type: :feature do
   end
 
   scenario "When I click on a post, I am redirected to that post's show page" do
-    visit user_path(User.first.id) 
+    visit user_path(User.first.id)
     expect(page).to have_content('This is a post 6')
-
   end
-
 end
