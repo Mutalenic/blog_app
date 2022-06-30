@@ -1,6 +1,14 @@
 class ApplicationController < ActionController::Base
-  def current_user
-    User.find(params[:id] || params[:user_id])
+  protect_from_forgery with: :exception
+
+  before_action :authenticate_user!
+  before_action :updated_allowed_params, if: :devise_controller?
+
+  protected
+
+  def updated_allowed_params
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation) }
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password) }
   end
 
   def all_users

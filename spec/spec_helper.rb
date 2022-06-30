@@ -59,7 +59,7 @@ RSpec.configure do |config|
   #   config.example_status_persistence_file_path = "spec/examples.txt"
   #
   #   # Limits the available syntax to the non-monkey patched syntax that is
-  #   # recommended. For more details, see:
+  #   # recommended. For more , see:
   #   # https://relishapp.com/rspec/rspec-core/docs/configuration/zero-monkey-patching-mode
   #   config.disable_monkey_patching!
   #

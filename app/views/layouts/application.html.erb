@@ -13,6 +13,11 @@
   <% if flash.any?%>
   <%= render 'layouts/messages' %>
   <% end %>
+  <div id="sign_out">
+  <% if user_signed_in? %>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+  <% end %>
+  </div>
     <%= yield %>
   </body>
 </html>
