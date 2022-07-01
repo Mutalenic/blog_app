@@ -1,6 +1,6 @@
-## Blog App - Integration Specs For Views
+## Blog App: add API EndPoints
 
-In this project, we have created integration tests for all of the views used in our project. We  have covered the user workflows and our users experience while taking into consideration the possible errors our users may cause.
+In this project, we have added some API endpoints to our Blog app. This will allow our app to be used in different ways, rather than just through our site - for example, a mobile app or a CLI application.
 ## Built with
 - Ruby
 - Rubocop
