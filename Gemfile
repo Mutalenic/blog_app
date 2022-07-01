@@ -85,3 +85,5 @@ end
 gem 'devise'
 
 gem 'cancancan'
+
+gem 'rack-cors'
