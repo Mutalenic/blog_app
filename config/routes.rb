@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
   devise_for :users
   get 'likes/new'
   get 'comments/new'
